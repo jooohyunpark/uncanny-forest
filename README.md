@@ -6,6 +6,22 @@ Cosmic forest is an alpha version of my thesis project(Unknown Universe). This p
 ## Documentation
 Details about project can be viewed [here](https://www.parkjoohyun.com/Cosmic-Forest.html).
 
+## Data
+WaveNet <br> 
+The dataset for training WaveNet model consists of 922 30-sec wav files(5.27 GB). It is 8 hour length that has even amount for 4 different categories: birds, creek, wind, bugs&frogs. Training process took 3 days with NVIDIA GPU showing 3.6 sec/step and stopped at 38244 steps with 1.531 loss. Command I used was:
+
+```
+python train.py  --data_dir=/<path> --num_steps=200000 --silence_threshold=0 --batch_size=4 --checkpoint_every=1000 
+-- max_checkpoints=100 
+```
+
+NSynth <br>
+Generation process took 61 hours for reconstructing 35-40 10-sec wav files using pre-trained model with following command. 
+
+```
+nsynth_generate --checkpoint_path=/<path>/wavenet-ckpt/model.ckpt-200000 --source_path=/<path> --save_path=/<path> --batch_size=1 
+```
+
 ## Tech Stack
 * [WaveNet](https://github.com/ibab/tensorflow-wavenet)
 * [NSynth(Magenta)](https://github.com/tensorflow/magenta/tree/master/magenta/models/nsynth)
