@@ -7,7 +7,7 @@ Cosmic forest is an alpha version of my thesis project(Unknown Universe). This p
 ## Documentation
 Details about project can be viewed [here](https://www.parkjoohyun.com/Cosmic-Forest.html).
 
-## Dataset
+## Generation
 #### WaveNet <br> 
 The dataset for training WaveNet model consists of 922 30-sec wav files(5.27 GB). It is 8 hour length that has even amount for 4 different categories: birds, creek, wind, bugs&frogs. Training process took 3 days with NVIDIA GPU showing 3.6 sec/step and stopped at 38244 steps with 1.531 loss. Command I used was:
 
@@ -27,3 +27,10 @@ nsynth_generate --checkpoint_path=/<path>/wavenet-ckpt/model.ckpt-200000 --sourc
 * [WaveNet](https://github.com/ibab/tensorflow-wavenet)
 * [NSynth(Magenta)](https://github.com/tensorflow/magenta/tree/master/magenta/models/nsynth)
 * [A-frame](https://aframe.io/)
+
+## Sound Reference
+* [BBC Sound Library](http://bbcsfx.acropolis.org.uk/)
+* [NPS Sound Library](https://www.nps.gov/romo/learn/photosmultimedia/soundlibrary.htm)
+* [Wildlife Sound Recording Society](https://www.wildlife-sound.org/sounds-of-nature/radio-wsrs)
+* [Free To Use Sounds](https://freetousesounds.com/complete-library/)
+* [Personal Recordings](https://recordingsofnature.wordpress.com/)
