@@ -29,7 +29,7 @@ html {
     text-align: center;
 }
 
-.info p {
+.info h2 {
     font-size: 22px;
     text-align: center;
     margin-bottom: 12%;
@@ -58,6 +58,7 @@ html {
 }
 
 .author {
+    margin-top : 8%;
     font-size: 12px;
 }
 
@@ -311,14 +312,18 @@ a:visited {
 
 /* Mobile - Landscape */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px), screen and (max-height: 820px)  {
     .loader,
     .info {
         width: 100%;
         font-size: 12px;
     }
-    .info p {
+    .info h2 {
         font-size: 12px;
+        margin-bottom : 4%;
+    }
+    .author {
+        margin-top : 4%;
     }
 }
 
@@ -331,8 +336,11 @@ a:visited {
         width: 100%;
         font-size: 14px;
     }
-    .info p {
+    .info h2 {
         font-size: 14px;
+         margin-bottom : 6%;
     }
-
+    .author {
+        margin-top : 6%;
+    }
 }
