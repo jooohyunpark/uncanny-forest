@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Cosmic Forest</title>
     <meta name="author" content="Joohyun Park">
-    <script src="js/aframe-master.js"></script>    
+    <script src="js/aframe-master.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -18,47 +18,52 @@
 
 <body>
 
-    
+
+    <!--
     <div class="loader">
         <div class="board">
             <p id="caption">This experience is optimized for Chrome on desktop.</p>
         </div>
     </div>
+-->
 
 
     <div class="info-wrapper">
     </div>
     <div class="info">
         <h2>COSMIC FOREST</h2>
-        Welcome.<br>
-        You are now standing at virtual forest.<br>
-        Take a moment to look around and listen.<br>
-        The sounds here are generated with deep neural networks.
-        <br><br><br> 
-        <span id="top"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</span><br>
-       Use arrow/WASD keys to move around.<br> 
-        Use mouse/trackpad to look around. <br>
-        <span id="bottom"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</span> <br><br><br>
-        <i>* Best experienced over headphones.</i> <br><br><br>
+        <p class="intro">
+            Welcome.<br>
+            You are now standing at virtual forest.<br>
+            Take a moment to look around and listen.<br>
+            The sounds here are generated with deep neural networks.</p>
+        <p class="guide">
+            <span id="top"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</span><br>
+            Use arrow/WASD keys to move around.<br>
+            Use mouse/trackpad to look around. <br>
+            <span id="bottom"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</span>
+        </p>
+
+        <p class="setting"><i>* Best experienced over headphones.</i></p>
         <button id="button">EXPLORE</button> <br>
-        
+
         <p class="author">Project by <a href="https://www.parkjoohyun.com/" target="_blank">Joohyun Park</a></p>
     </div>
 
-         
+
     <a-scene overlay-visibility>
 
         <a-assets>
             <!--    mixin      -->
             <a-mixin id="object" geometry="primitive: sphere; radius:0.8;"></a-mixin>
             <a-mixin id="audioSetting" sound="autoplay:true; loop:true; maxDistance:20; distanceModel:exponential;"></a-mixin>
-            <a-mixin id="light" geometry="primitive: sphere; radius: 0.001"></a-mixin>     
+            <a-mixin id="light" geometry="primitive: sphere; radius: 0.001"></a-mixin>
 
             <!--    audio      -->
             <audio id="bird" src="sound/gen_bird-10s.wav"></audio>
             <audio id="bird2" src="sound/gen_bird2-10s.wav"></audio>
             <audio id="wind" src="sound/gen_wind-10s.wav"></audio>
-            <audio id="wind2" src="sound/gen_wind2-10s.wav"></audio>            
+            <audio id="wind2" src="sound/gen_wind2-10s.wav"></audio>
             <audio id="creek-wind" src="sound/gen_creek-wind-10s.wav"></audio>
             <audio id="night" src="sound/gen_night-10s.wav"></audio>
             <audio id="bamboo" src="sound/gen_bamboo-10s.wav"></audio>
@@ -68,9 +73,9 @@
             <audio id="insects" src="sound/gen_Insects.wav"></audio>
             <audio id="bali" src="sound/gen_Bali.wav"></audio>
             <audio id="forest" src="sound/gen_forest_10s.wav"></audio>
-            <audio id="forest2" src="sound/gen_forest2-10s.wav"></audio>            
+            <audio id="forest2" src="sound/gen_forest2-10s.wav"></audio>
             <audio id="lake" src="sound/gen_lake_10s.wav"></audio>
-            <audio id="pakistan" src="sound/gen_Pakistan-10s.wav"></audio>      
+            <audio id="pakistan" src="sound/gen_Pakistan-10s.wav"></audio>
             <audio id="owls" src="sound/gen_Vietnam_HoiAn_OWLS.wav"></audio>
             <audio id="costa" src="sound/gen_CostaRica-10s.wav"></audio>
             <audio id="japan" src="sound/gen_Japan_forest-10s.wav"></audio>
@@ -78,7 +83,7 @@
             <audio id="thailand2" src="sound/gen_Thailand_NightAmbient-10s.wav"></audio>
             <audio id="elk" src="sound/gen_Elk.wav"></audio>
             <audio id="fisher-cat" src="sound/gen_Fisher-Cat-10s.wav"></audio>
-            <audio id="rainforest" src="sound/gen_rainforest-10s.wav"></audio>               
+            <audio id="rainforest" src="sound/gen_rainforest-10s.wav"></audio>
             <audio id="wavenet" src="sound/wavenet/forest-28000-1.wav"></audio>
             <audio id="wavenet2" src="sound/wavenet/forest-30000-2.wav"></audio>
         </a-assets>
@@ -111,7 +116,7 @@
         <a-entity class="object" sound="src: #insects" mixin="object audioSetting"></a-entity>
         <a-entity class="object" sound="src: #bali" mixin="object audioSetting"></a-entity>
         <a-entity class="object" sound="src: #forest" mixin="object audioSetting"></a-entity>
-        <a-entity class="object" sound="src: #forest2" mixin="object audioSetting"></a-entity> 
+        <a-entity class="object" sound="src: #forest2" mixin="object audioSetting"></a-entity>
         <a-entity class="object" sound="src: #lake" mixin="object audioSetting"></a-entity>
         <a-entity class="object" sound="src: #pakistan" mixin="object audioSetting"></a-entity>
         <a-entity class="object" sound="src: #owls" mixin="object audioSetting"></a-entity>
@@ -119,8 +124,9 @@
         <a-entity class="object" sound="src: #japan" mixin="object audioSetting"></a-entity>
         <a-entity class="object" sound="src: #thailand" mixin="object audioSetting"></a-entity>
         <a-entity class="object" sound="src: #thailand2" mixin="object audioSetting"></a-entity>
-        <a-entity class="object" sound="src: #elk" mixin="object audioSetting"></a-entity> 
-        <a-entity class="object" sound="src: #fisher-cat" mixin="object audioSetting"></a-entity>   <a-entity class="object" sound="src: #rainforest" mixin="object audioSetting"></a-entity>
+        <a-entity class="object" sound="src: #elk" mixin="object audioSetting"></a-entity>
+        <a-entity class="object" sound="src: #fisher-cat" mixin="object audioSetting"></a-entity>
+        <a-entity class="object" sound="src: #rainforest" mixin="object audioSetting"></a-entity>
         <a-entity class="object" sound="src: #wavenet" mixin="object audioSetting"></a-entity>
         <a-entity class="object" sound="src: #wavenet2" mixin="object audioSetting"></a-entity>
     </a-scene>
