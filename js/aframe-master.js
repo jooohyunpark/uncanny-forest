@@ -43727,7 +43727,7 @@ function rebuildAttribute (attrib, data, itemSize) {
 		getContext: function () {
 
 			if ( context === undefined ) {
-            
+                        
 				context = new ( window.AudioContext || window.webkitAudioContext )();
 			}
 
@@ -43742,13 +43742,7 @@ function rebuildAttribute (attrib, data, itemSize) {
 		}
 
 	};
-                             
-// One-liner to resume playback when user interacted with the page.
-window.addEventListener('mousemove', function() {
-  context.resume();
-});
-    
-
+        
 
 	/**
 	 * @author Reece Aaron Lecrivain / http://reecenotes.com/

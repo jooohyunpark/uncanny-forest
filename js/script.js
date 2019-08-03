@@ -14,7 +14,16 @@ let volume = 0;
 let trigger = false;
 
 
-$(document).ready(setTimeout(() => { trigger = true }, 2800));
+//$(document).ready(setTimeout(() => {
+//    trigger = true
+//}, 2800));
+
+$('#button').click(() => {
+    for (let i = 0; i < object.length; i++) {
+        object[i].components.sound.playSound();
+    }
+    trigger = true;
+})
 
 
 function draw() {
