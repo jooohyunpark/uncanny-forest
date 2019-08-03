@@ -43719,6 +43719,7 @@ function rebuildAttribute (attrib, data, itemSize) {
 	 * @author mrdoob / http://mrdoob.com/
 	 */
 
+                             
 	var context;
 
 	var AudioContext = {
@@ -43726,9 +43727,8 @@ function rebuildAttribute (attrib, data, itemSize) {
 		getContext: function () {
 
 			if ( context === undefined ) {
-
+            
 				context = new ( window.AudioContext || window.webkitAudioContext )();
-
 			}
 
 			return context;
@@ -43742,6 +43742,13 @@ function rebuildAttribute (attrib, data, itemSize) {
 		}
 
 	};
+                             
+// One-liner to resume playback when user interacted with the page.
+window.addEventListener('mousemove', function() {
+  context.resume();
+});
+    
+
 
 	/**
 	 * @author Reece Aaron Lecrivain / http://reecenotes.com/

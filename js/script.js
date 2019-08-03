@@ -9,7 +9,7 @@ let cam = document.querySelector('.camera');
 let scene = document.querySelector('a-scene');
 let object = scene.querySelectorAll('.object');
 let light = scene.querySelector('#light');
-let lightNum = 10;
+//let lightNum = 10;
 let volume = 0;
 let trigger = false;
 
@@ -47,8 +47,8 @@ for (let i = 0; i < object.length; i++) {
 
 
 
-lightSystem(5, 0, 360, 0);
-lightSystem(5, 0, -360, 0);
+lightSystem(4, 0, 360, 0);
+lightSystem(4, 0, -360, 0);
 
 
 function lightSystem(num, xVal, yVal, zVal) {
