@@ -4,8 +4,6 @@ Cosmic forest is an alpha version of my thesis project(Unknown Universe). This p
 * [View Project](https://cosmicforest.parkjoohyun.com/) <br>
 * [Demo](https://vimeo.com/307056674)
 
-## Documentation
-Details about project can be viewed [here](https://www.parkjoohyun.com/Cosmic-Forest.html).
 
 ## Generation
 #### WaveNet <br> 
