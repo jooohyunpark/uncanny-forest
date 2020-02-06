@@ -6,24 +6,22 @@
     <title>Cosmic Forest</title>
     <meta name="author" content="Joohyun Park">
     <script src="js/aframe-master.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="shortcut icon" href="img/favicon.png">
     <link rel="apple-touch-icon" href="img/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="js/index.js"></script>
+    <script src="js/env.js"></script>
 </head>
 
 <body>
 
 
-<div class="loader">
-    <div class="board">
-        <p id="caption">This experience is optimized for Chrome on desktop.</p>
+    <div class="loader">
+        <div class="board">
+            <p id="caption">This experience is optimized for Chrome on desktop.</p>
+        </div>
     </div>
-</div>
 
 
     <div class="info-wrapper">
@@ -36,10 +34,12 @@
             Take a moment to look around and listen.<br>
             The sounds here are generated with deep neural networks.</p>
         <p class="guide">
-            <span id="top"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</span><br>
+            <span id="top"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                &emsp;</span><br>
             Use arrow/WASD keys to move around.<br>
             Use mouse/trackpad to look around. <br>
-            <span id="bottom"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</span>
+            <span id="bottom"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                &emsp; &emsp;</span>
         </p>
 
         <p class="setting"><i>* Best experienced over headphones.</i></p>
@@ -54,7 +54,8 @@
         <a-assets>
             <!--    mixin      -->
             <a-mixin id="object" geometry="primitive: sphere; radius:0.8;"></a-mixin>
-            <a-mixin id="audioSetting" sound="autoplay:false; loop:true; maxDistance:20; distanceModel:exponential;"></a-mixin>
+            <a-mixin id="audioSetting" sound="autoplay:false; loop:true; maxDistance:20; distanceModel:exponential;">
+            </a-mixin>
             <a-mixin id="light" geometry="primitive: sphere; radius: 0.001"></a-mixin>
 
             <!--    audio      -->
@@ -91,7 +92,8 @@
         <a-entity environment="preset: forest" id="environment"></a-entity>
 
         <!--  camera  -->
-        <a-entity class="camera" position="0 2 0" camera="" wasd-controls="" rotation="" look-controls="" aframe-injected="" scale="" visible=""></a-entity>
+        <a-entity class="camera" position="0 2 0" camera="" wasd-controls="" rotation="" look-controls=""
+            aframe-injected="" scale="" visible=""></a-entity>
 
         <!--   light     -->
         <a-light type="ambient" color="#0a0a0a"></a-light>

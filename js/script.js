@@ -39,7 +39,10 @@ function draw() {
             trigger = false;
         }
     }
+    requestAnimationFrame(draw)
 }
+
+draw()
 
 
 

@@ -1,0 +1,19 @@
+{
+  "name": "cosmic-forest",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html",
+    "clean": "rm -rf dist/* && rm -rf .cache/*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "aframe": "^1.0.4"
+  }
+}
