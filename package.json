@@ -13,7 +13,5 @@
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
   },
-  "dependencies": {
-    "aframe": "^1.0.4"
-  }
+  "dependencies": {}
 }
