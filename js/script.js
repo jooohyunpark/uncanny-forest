@@ -11,7 +11,7 @@ let object = scene.querySelectorAll('.object');
 let light = scene.querySelector('#light');
 //let lightNum = 10;
 let volume = 0;
-let trigger = false;
+let trigger = false
 
 
 //$(document).ready(setTimeout(() => {
