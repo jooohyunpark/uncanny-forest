@@ -1,3 +1,5 @@
+
+
 /* global AFRAME, THREE */
 
 if (typeof AFRAME === 'undefined') {
@@ -513,7 +515,6 @@ AFRAME.registerComponent('environment', {
             str += ', ';
         }
         str += '}';
-        console.log(str);
     },
 
     // dumps current component settings to console.
@@ -560,7 +561,6 @@ AFRAME.registerComponent('environment', {
                 }
             }
         }
-        console.log('%c' + params.join('; '), 'color: #f48;font-weight:bold');
     },
 
     // Custom Math.random() with seed. Given this.data.seed and x, it always returns the same "random" number
