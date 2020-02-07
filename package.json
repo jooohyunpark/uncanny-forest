@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html",
-    "clean": "rm -rf dist/* && rm -rf .cache/*"
+    "start": "parcel index.html --no-cache --open",
+    "build": "rm -rf dist/* && parcel build index.html --no-source-maps --no-cache",
+    "clean": "rm -rf dist/*"
   },
   "keywords": [],
   "author": "",
