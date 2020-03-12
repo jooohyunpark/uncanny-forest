@@ -1,3 +1,4 @@
+import './aframe-master'
 
 
 /* global AFRAME, THREE */

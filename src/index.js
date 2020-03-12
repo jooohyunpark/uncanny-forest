@@ -1,8 +1,12 @@
+// import './js/aframe-master'
+// import './js/env'
+import $ from "jquery";
+
+
 $(document).ready(() => $('.container').delay(2000).fadeOut(2000));
 $(document).ready(() => $('.board').delay(3000).fadeOut(1000));
 $('#button').click(() => $('.info').fadeOut(1200));
 $('#button').click(() => $('.info-wrapper').fadeOut(1200));
-
 
 
 let cam = document.querySelector('.camera');

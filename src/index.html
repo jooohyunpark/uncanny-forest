@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <title>Cosmic Forest</title>
     <meta name="author" content="Joohyun Park">
-    <script src="js/aframe-master.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="js/aframe-master.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <link rel="shortcut icon" href="img/favicon.png">
     <link rel="apple-touch-icon" href="img/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="js/env.js"></script>
+    <!-- <script src="js/env.js"></script> -->
 </head>
 
 <body>
@@ -59,32 +59,32 @@
             <a-mixin id="light" geometry="primitive: sphere; radius: 0.001"></a-mixin>
 
             <!--    audio      -->
-            <audio id="bird" src="sound/gen_bird-10s.wav"></audio>
-            <audio id="bird2" src="sound/gen_bird2-10s.wav"></audio>
-            <audio id="wind" src="sound/gen_wind-10s.wav"></audio>
-            <audio id="wind2" src="sound/gen_wind2-10s.wav"></audio>
-            <audio id="creek-wind" src="sound/gen_creek-wind-10s.wav"></audio>
-            <audio id="night" src="sound/gen_night-10s.wav"></audio>
-            <audio id="bamboo" src="sound/gen_bamboo-10s.wav"></audio>
-            <audio id="cameroon" src="sound/gen_cameroon-10s.wav"></audio>
-            <audio id="chille" src="sound/gen_chille-10s.wav"></audio>
-            <audio id="lion" src="sound/gen_lion-10s.wav"></audio>
-            <audio id="insects" src="sound/gen_Insects.wav"></audio>
-            <audio id="bali" src="sound/gen_Bali.wav"></audio>
-            <audio id="forest" src="sound/gen_forest_10s.wav"></audio>
-            <audio id="forest2" src="sound/gen_forest2-10s.wav"></audio>
-            <audio id="lake" src="sound/gen_lake_10s.wav"></audio>
-            <audio id="pakistan" src="sound/gen_Pakistan-10s.wav"></audio>
-            <audio id="owls" src="sound/gen_Vietnam_HoiAn_OWLS.wav"></audio>
-            <audio id="costa" src="sound/gen_CostaRica-10s.wav"></audio>
-            <audio id="japan" src="sound/gen_Japan_forest-10s.wav"></audio>
-            <audio id="thailand" src="sound/gen_Thailand_jungle-10s.wav"></audio>
-            <audio id="thailand2" src="sound/gen_Thailand_NightAmbient-10s.wav"></audio>
-            <audio id="elk" src="sound/gen_Elk.wav"></audio>
-            <audio id="fisher-cat" src="sound/gen_Fisher-Cat-10s.wav"></audio>
-            <audio id="rainforest" src="sound/gen_rainforest-10s.wav"></audio>
-            <audio id="wavenet" src="sound/wavenet/forest-28000-1.wav"></audio>
-            <audio id="wavenet2" src="sound/wavenet/forest-30000-2.wav"></audio>
+            <audio id="bird" :src="require('@/sound/gen_bird-10s.wav')"></audio>
+            <audio id="bird2" :src="require('@/sound/gen_bird2-10s.wav')"></audio>
+            <audio id="wind" :src="require('@/sound/gen_wind-10s.wav')"></audio>
+            <audio id="wind2" :src="require('@/sound/gen_wind2-10s.wav')"></audio>
+            <audio id="creek-wind" :src="require('@/sound/gen_creek-wind-10s.wav')"></audio>
+            <audio id="night" :src="require('@/sound/gen_night-10s.wav')"></audio>
+            <audio id="bamboo" :src="require('@/sound/gen_bamboo-10s.wav')"></audio>
+            <audio id="cameroon" :src="require('@/sound/gen_cameroon-10s.wav')"></audio>
+            <audio id="chille" :src="require('@/sound/gen_chille-10s.wav')"></audio>
+            <audio id="lion" :src="require('@/sound/gen_lion-10s.wav')"></audio>
+            <audio id="insects" :src="require('@/sound/gen_Insects.wav')"></audio>
+            <audio id="bali" :src="require('@/sound/gen_Bali.wav')"></audio>
+            <audio id="forest" :src="require('@/sound/gen_forest_10s.wav')"></audio>
+            <audio id="forest2" :src="require('@/sound/gen_forest2-10s.wav')"></audio>
+            <audio id="lake" :src="require('@/sound/gen_lake_10s.wav')"></audio>
+            <audio id="pakistan" :src="require('@/sound/gen_Pakistan-10s.wav')"></audio>
+            <audio id="owls" :src="require('@/sound/gen_Vietnam_HoiAn_OWLS.wav')"></audio>
+            <audio id="costa" :src="require('@/sound/gen_CostaRica-10s.wav')"></audio>
+            <audio id="japan" :src="require('@/sound/gen_Japan_forest-10s.wav')"></audio>
+            <audio id="thailand" :src="require('@/sound/gen_Thailand_jungle-10s.wav')"></audio>
+            <audio id="thailand2" :src="require('@/sound/gen_Thailand_NightAmbient-10s.wav')"></audio>
+            <audio id="elk" :src="require('@/sound/gen_Elk.wav')"></audio>
+            <audio id="fisher-cat" :src="require('@/sound/gen_Fisher-Cat-10s.wav')"></audio>
+            <audio id="rainforest" :src="require('@/sound/gen_rainforest-10s.wav')"></audio>
+            <audio id="wavenet" :src="require('@/sound/wavenet/forest-28000-1.wav')"></audio>
+            <audio id="wavenet2" :src="require('@/sound/wavenet/forest-30000-2.wav')"></audio>
         </a-assets>
 
 
@@ -132,7 +132,7 @@
     </a-scene>
 
 
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
 </body>
 
 </html>
