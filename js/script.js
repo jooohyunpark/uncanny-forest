@@ -4,19 +4,12 @@ $('#button').click(() => $('.info').fadeOut(1200));
 $('#button').click(() => $('.info-wrapper').fadeOut(1200));
 
 
-
 let cam = document.querySelector('.camera');
 let scene = document.querySelector('a-scene');
 let object = scene.querySelectorAll('.object');
 let light = scene.querySelector('#light');
-//let lightNum = 10;
 let volume = 0;
 let trigger = false
-
-
-//$(document).ready(setTimeout(() => {
-//    trigger = true
-//}, 2800));
 
 $('#button').click(() => {
     for (let i = 0; i < object.length; i++) {
@@ -43,7 +36,6 @@ function draw() {
 }
 
 draw()
-
 
 
 for (let i = 0; i < object.length; i++) {
