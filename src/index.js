@@ -1,5 +1,7 @@
-// import './js/aframe-master'
-// import './js/env'
+require('aframe')
+
+import './js/env'
+
 import $ from "jquery";
 
 

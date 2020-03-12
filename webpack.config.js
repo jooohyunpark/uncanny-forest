@@ -4,11 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const path = require('path')
 
 module.exports = {
-    // entry: './src/index.js',
-    entry: {
-        index: './src/index.js',
-        env: './src/js/env.js',
-    },
+    entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].[hash:20].js'
@@ -24,6 +20,14 @@ module.exports = {
             {
                 test: /\.html$/,
                 use: ['html-loader']
+            },
+            {
+                test: /\.js$/i,
+                exclude: /node_modules/,
+                loader: "babel-loader",
+                options: {
+                    presets: ["@babel/preset-env"]
+                }
             },
             {
                 test: /\.css$/,
