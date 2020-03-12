@@ -1,4 +1,36 @@
-
+const config = {
+    active: true,
+    seed: 1,
+    skyType: 'atmosphere',
+    skyColor: '#5200ff',
+    horizonColor: '#ccc',
+    lighting: 'distant',
+    lightPosition: {
+        x: 0,
+        y: 0.02,
+        z: -0.46
+    },
+    fog: 0.8,
+    flatShading: false,
+    playArea: 1,
+    ground: 'hills',
+    groundYScale: 4,
+    groundTexture: 'color',
+    groundColor: '#000',
+    groundColor2: '#000',
+    dressing: 'cylinders',
+    dressingAmount: 2000,
+    dressingColor: '#000',
+    dressingScale: 0.1,
+    dressingVariance: {
+        x: 0.1,
+        y: 100,
+        z: 0.1
+    },
+    dressingUniformScale: true,
+    dressingOnPlayArea: 0,
+    shadow: true
+}
 
 /* global AFRAME, THREE */
 
@@ -14,173 +46,141 @@ function enviroGetSettings() {
 }
 
 AFRAME.registerComponent('environment', {
-    // schema: {
-    //     active: {
-    //         default: false
-    //     },
-    //     preset: {
-    //         default: 'forest'
-    //     },
-    //     seed: {
-    //         type: 'int',
-    //         default: 1,
-    //         min: 0,
-    //         max: 1000
-    //     },
+    schema: {
+        active: {
+            default: false
+        },
+        preset: {
+            default: 'forest'
+        },
+        seed: {
+            type: 'int',
+            default: 1,
+            min: 0,
+            max: 1000
+        },
 
-    //     skyType: {
-    //         default: 'color',
-    //         oneOf: ['none', 'color', 'gradient', 'atmosphere']
-    //     },
-    //     skyColor: {
-    //         type: 'color'
-    //     },
-    //     horizonColor: {
-    //         type: 'color'
-    //     },
-    //     lighting: {
-    //         default: 'distant',
-    //         oneOf: ['none', 'distant', 'point']
-    //     },
-    //     shadow: {
-    //         default: false
-    //     },
-    //     shadowSize: {
-    //         default: 10
-    //     },
-    //     lightPosition: {
-    //         type: 'vec3',
-    //         default: {
-    //             x: 0,
-    //             y: 1,
-    //             z: -0.2
-    //         }
-    //     },
-    //     fog: {
-    //         type: 'float',
-    //         default: 0,
-    //         min: 0,
-    //         max: 1
-    //     },
+        skyType: {
+            default: 'color',
+            oneOf: ['none', 'color', 'gradient', 'atmosphere']
+        },
+        skyColor: {
+            type: 'color'
+        },
+        horizonColor: {
+            type: 'color'
+        },
+        lighting: {
+            default: 'distant',
+            oneOf: ['none', 'distant', 'point']
+        },
+        shadow: {
+            default: false
+        },
+        shadowSize: {
+            default: 10
+        },
+        lightPosition: {
+            type: 'vec3',
+            default: {
+                x: 0,
+                y: 1,
+                z: -0.2
+            }
+        },
+        fog: {
+            type: 'float',
+            default: 0,
+            min: 0,
+            max: 1
+        },
 
-    //     flatShading: {
-    //         default: false
-    //     },
-    //     playArea: {
-    //         type: 'float',
-    //         default: 1,
-    //         min: 0.5,
-    //         max: 10
-    //     },
+        flatShading: {
+            default: false
+        },
+        playArea: {
+            type: 'float',
+            default: 1,
+            min: 0.5,
+            max: 10
+        },
 
-    //     ground: {
-    //         default: 'hills',
-    //         oneOf: ['none', 'flat', 'hills', 'canyon', 'spikes', 'noise']
-    //     },
-    //     groundYScale: {
-    //         type: 'float',
-    //         default: 3,
-    //         min: 0,
-    //         max: 50
-    //     },
-    //     groundTexture: {
-    //         default: 'none',
-    //         oneOf: ['none', 'checkerboard', 'squares', 'walkernoise']
-    //     },
-    //     groundColor: {
-    //         type: 'color',
-    //         default: '#553e35'
-    //     },
-    //     groundColor2: {
-    //         type: 'color',
-    //         default: '#694439'
-    //     },
+        ground: {
+            default: 'hills',
+            oneOf: ['none', 'flat', 'hills', 'canyon', 'spikes', 'noise']
+        },
+        groundYScale: {
+            type: 'float',
+            default: 3,
+            min: 0,
+            max: 50
+        },
+        groundTexture: {
+            default: 'none',
+            oneOf: ['none', 'checkerboard', 'squares', 'walkernoise']
+        },
+        groundColor: {
+            type: 'color',
+            default: '#553e35'
+        },
+        groundColor2: {
+            type: 'color',
+            default: '#694439'
+        },
 
-    //     dressing: {
-    //         default: 'mushrooms',
-    //         oneOf: ['none', 'cubes', 'pyramids', 'cylinders', 'hexagons', 'stones', 'trees', 'mushrooms', 'towers', 'apparatus', 'arches', 'torii']
-    //     },
-    //     dressingAmount: {
-    //         type: 'int',
-    //         default: 10,
-    //         min: 0,
-    //         max: 1000
-    //     },
-    //     dressingColor: {
-    //         type: 'color',
-    //         default: '#795449'
-    //     },
-    //     dressingScale: {
-    //         type: 'float',
-    //         default: 5,
-    //         min: 0,
-    //         max: 100
-    //     },
-    //     dressingVariance: {
-    //         type: 'vec3',
-    //         default: {
-    //             x: 1,
-    //             y: 1,
-    //             z: 1
-    //         }
-    //     },
-    //     dressingUniformScale: {
-    //         default: true
-    //     },
-    //     dressingOnPlayArea: {
-    //         type: 'float',
-    //         default: 0,
-    //         min: 0,
-    //         max: 1
-    //     },
+        dressing: {
+            default: 'mushrooms',
+            oneOf: ['none', 'cubes', 'pyramids', 'cylinders', 'hexagons', 'stones', 'trees', 'mushrooms', 'towers', 'apparatus', 'arches', 'torii']
+        },
+        dressingAmount: {
+            type: 'int',
+            default: 10,
+            min: 0,
+            max: 1000
+        },
+        dressingColor: {
+            type: 'color',
+            default: '#795449'
+        },
+        dressingScale: {
+            type: 'float',
+            default: 5,
+            min: 0,
+            max: 100
+        },
+        dressingVariance: {
+            type: 'vec3',
+            default: {
+                x: 1,
+                y: 1,
+                z: 1
+            }
+        },
+        dressingUniformScale: {
+            default: true
+        },
+        dressingOnPlayArea: {
+            type: 'float',
+            default: 0,
+            min: 0,
+            max: 1
+        },
 
-    //     grid: {
-    //         default: 'none',
-    //         oneOf: ['none', '1x1', '2x2', 'crosses', 'dots', 'xlines', 'ylines']
-    //     },
-    //     gridColor: {
-    //         type: 'color',
-    //         default: '#ccc'
-    //     }
-    // },
+        grid: {
+            default: 'none',
+            oneOf: ['none', '1x1', '2x2', 'crosses', 'dots', 'xlines', 'ylines']
+        },
+        gridColor: {
+            type: 'color',
+            default: '#ccc'
+        }
+    },
 
     multiple: false,
 
     presets: {
         'none': {},
-        'forest': {
-            active: true,
-            seed: 1,
-            skyType: 'atmosphere',
-            skyColor: '#5200ff',
-            horizonColor: '#ccc',
-            lighting: 'distant',
-            lightPosition: {
-                x: 0,
-                y: 0.02,
-                z: -0.46
-            },
-            fog: 0.8,
-            flatShading: false,
-            playArea: 1,
-            ground: 'hills',
-            groundYScale: 4,
-            groundTexture: 'walkernoise',
-            groundColor: '#FB61BF',
-            groundColor2: '#00ffff',
-            dressing: 'trees',
-            dressingAmount: 2222,
-            dressingColor: '#00ffff', //00ffff
-            dressingScale: 1,
-            dressingVariance: {
-                x: 1,
-                y: 22,
-                z: 1
-            },
-            dressingUniformScale: true,
-            dressingOnPlayArea: 0,
-            shadow: true
-        }
+        'forest': config
     },
 
     init: function () {

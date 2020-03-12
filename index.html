@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="shortcut icon" href="img/favicon.png">
     <link rel="apple-touch-icon" href="img/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="js/env.js"></script>
 </head>
@@ -17,20 +17,25 @@
 <body>
 
 
-    <!-- <div class="loader">
+    <div class="loader">
         <div class="board">
-            <p id="caption">This experience is optimized for Chrome on desktop.</p>
+            <p id="caption">Uncanny Forest</p>
         </div>
-    </div> -->
-
+    </div>
+    <div class="warn">
+        <div>
+            Please resize your browser. <br />
+            This experience is optimized for Chrome on desktop.
+        </div>
+    </div>
 
     <div class="info-wrapper">
     </div>
     <div class="info">
-        <h2>COSMIC FOREST</h2>
+        <h2>Uncanny Forest</h2>
         <p class="intro">
             Welcome.<br>
-            You are now standing at virtual forest.<br>
+            You are now standing at the forest.<br>
             Take a moment to look around and listen.<br>
             The sounds here are generated with deep neural networks.</p>
         <p class="guide">
@@ -130,6 +135,7 @@
         <a-entity class="object" sound="src: #wavenet" mixin="object audioSetting"></a-entity>
         <a-entity class="object" sound="src: #wavenet2" mixin="object audioSetting"></a-entity>
     </a-scene>
+
 
 
     <script src="js/script.js"></script>
