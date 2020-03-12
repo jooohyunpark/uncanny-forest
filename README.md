@@ -1,5 +1,5 @@
-# Cosmic-Forest
-Cosmic forest is an alpha version of my thesis project(Unknown Universe). This project is designed as an immersive web VR experience combined with machine learning. All the sounds here are LATENT REPRESENTATION of real forests encoded and decoded through latent space with deep neural networks. You can see how neural networks interpret and extract meaningful features of forest sounds and reconstruct them. 
+# Uncanny-Forest
+Uncanny forest is an alpha version of my thesis project. This project is designed as an immersive web VR experience combined with machine learning. All the sounds here are LATENT REPRESENTATION of real forests encoded and decoded through latent space with deep neural networks. You can see how neural networks interpret and extract meaningful features of forest sounds and reconstruct them. 
 
 * [View Project](https://cosmicforest.parkjoohyun.com/) <br>
 * [Demo](https://vimeo.com/307056674)

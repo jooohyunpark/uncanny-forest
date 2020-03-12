@@ -1,5 +1,41 @@
+<<<<<<< HEAD:src/js/env.js
 import './aframe-master'
 
+=======
+const config = {
+    active: true,
+    seed: 1,
+    skyType: 'atmosphere',
+    skyColor: '#5200ff',
+    horizonColor: '#ccc',
+    lighting: 'distant',
+    lightPosition: {
+        x: 0,
+        y: 0.02,
+        z: -0.46
+    },
+    fog: 0.8,
+    flatShading: false,
+    playArea: 1,
+    ground: 'hills',
+    groundYScale: 4,
+    groundTexture: 'color',
+    groundColor: '#000',
+    groundColor2: '#000',
+    dressing: 'cylinders',
+    dressingAmount: 2000,
+    dressingColor: '#000',
+    dressingScale: 0.1,
+    dressingVariance: {
+        x: 0.1,
+        y: 100,
+        z: 0.1
+    },
+    dressingUniformScale: true,
+    dressingOnPlayArea: 0,
+    shadow: true
+}
+>>>>>>> master:js/env.js
 
 /* global AFRAME, THREE */
 
@@ -144,6 +180,7 @@ AFRAME.registerComponent('environment', {
     multiple: false,
 
     presets: {
+<<<<<<< HEAD:src/js/env.js
         'forest': {
             active: true,
             seed: 1,
@@ -177,6 +214,10 @@ AFRAME.registerComponent('environment', {
             dressingOnPlayArea: 0,
             shadow: true
         }
+=======
+        'none': {},
+        'forest': config
+>>>>>>> master:js/env.js
     },
 
     init: function () {
