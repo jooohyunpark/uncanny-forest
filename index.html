@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <title>Uncanny Forest</title>
     <meta name="author" content="Joohyun Park">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="js/aframe-master.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="js/env.js"></script>
 </head>
 
@@ -33,14 +33,14 @@
         <h2>Uncanny Forest</h2>
         <p class="intro">
             Welcome.<br>
-            You are now standing at the forest.<br>
+            You are now standing in the middle of strange place.<br>
             Take a moment to look around and listen.<br>
             The sounds here are generated with deep neural networks.</p>
         <p class="guide">
             <span id="top"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
                 &emsp;</span><br>
-            Use arrow/WASD keys to move around.<br>
-            Use mouse/trackpad to look around. <br>
+            Use arrow/WASD keys to move.<br>
+            Use mouse/trackpad to pan. <br>
             <span id="bottom"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
                 &emsp; &emsp;</span>
         </p>
@@ -56,7 +56,7 @@
 
         <a-assets>
             <!--    mixin      -->
-            <a-mixin id="object" geometry="primitive: sphere; radius:0.5; segments-height:128; segments-width: 128;">
+            <a-mixin id="object" geometry="primitive: sphere; radius:0.5; segments-height:128; segments-width:128;">
             </a-mixin>
             <a-mixin id="audioSetting" sound="autoplay:false; loop:true; maxDistance:20; distanceModel:exponential;">
             </a-mixin>
