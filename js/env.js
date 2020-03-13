@@ -2,8 +2,8 @@ const config = {
     active: true,
     seed: 1,
     skyType: 'atmosphere',
-    skyColor: '#5200ff',
-    horizonColor: '#ccc',
+    skyColor: '#fff',
+    horizonColor: '#fff',
     lighting: 'distant',
     lightPosition: {
         x: 0,
@@ -14,12 +14,12 @@ const config = {
     flatShading: false,
     playArea: 1,
     ground: 'hills',
-    groundYScale: 4,
-    groundTexture: 'color',
-    groundColor: '#000',
-    groundColor2: '#000',
+    groundYScale: 3,
+    groundTexture: 'walkernoise',
+    groundColor: '#4c00ed',
+    groundColor2: '#5200ff',
     dressing: 'cylinders',
-    dressingAmount: 2000,
+    dressingAmount: 3000,
     dressingColor: '#000',
     dressingScale: 0.1,
     dressingVariance: {
@@ -94,7 +94,6 @@ AFRAME.registerComponent('environment', {
             min: 0,
             max: 1
         },
-
         flatShading: {
             default: false
         },

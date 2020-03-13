@@ -15,11 +15,11 @@
 <body>
 
 
-    <div class="loader">
+    <!-- <div class="loader">
         <div class="board">
             <p id="caption">Uncanny Forest</p>
         </div>
-    </div>
+    </div> -->
     <div class="warn">
         <div>
             Please resize your browser. <br />
@@ -96,14 +96,11 @@
         <a-entity environment="preset: forest" id="environment"></a-entity>
 
         <!--  camera  -->
-        <a-entity class="camera" position="0 2 0" camera="" wasd-controls="" rotation="" look-controls=""
-            aframe-injected="" scale="" visible=""></a-entity>
+        <a-entity class="camera" position="0 2 0" camera="" wasd-controls="acceleration:65;" rotation=""
+            look-controls="" aframe-injected="" scale="" visible=""></a-entity>
 
         <!--   light     -->
         <a-light type="ambient" color="#0a0a0a"></a-light>
-        <a-light color="#5200ff" type="point" position="100 20 100"></a-light>
-        <a-light color="#ed1683" type="point" position="-200 -100 -100"></a-light>
-        <a-light color="#21ff94" type="point" position="0 -400 0"></a-light>
 
 
         <!--   obj    -->
