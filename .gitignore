@@ -1,4 +1,4 @@
 node_modules
 /sound/*
-/img/*
 /dist/*
+.DS_Store
