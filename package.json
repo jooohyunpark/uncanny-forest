@@ -1,17 +1,15 @@
 {
   "name": "uncanny-forest",
   "version": "1.0.0",
-  "description": "",
+  "author": "Joohyun Park",
+  "license": "ISC",
   "source": "index.html",
   "scripts": {
-    "start": "parcel serve index.html --no-cache --open",
-    "build": "npm run clean && parcel build index.html --no-source-maps --no-cache",
+    "start": "parcel serve --no-cache --open",
+    "build": "npm run clean && parcel build --no-source-maps --no-cache",
     "preview": "npm run build && http-server ./dist",
     "clean": "rm -rf dist/*"
   },
-  "keywords": [],
-  "author": "Joohyun Park",
-  "license": "ISC",
   "devDependencies": {
     "http-server": "^14.1.1",
     "parcel": "^2.12.0"
